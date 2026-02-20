@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="card">
+    <view class="title">缘解 Veliora</view>
+    <view class="subtitle">支持邮箱/手机号注册登录 + 套餐开通</view>
+    <input class="input" placeholder="后端地址（默认 http://127.0.0.1:4173）" value="{{apiBase}}" bindinput="onApiBaseInput" />
+    <button class="btn-ghost" bindtap="saveApiBase">保存后端地址</button>
+    <picker mode="selector" range="{{envOptions}}" value="{{envIndex}}" bindchange="onEnvChange">
+      <view class="input">环境切换：{{envOptions[envIndex]}}</view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="title">账号中心</view>
+    <input class="input" placeholder="邮箱（可选）" value="{{regEmail}}" bindinput="onRegEmail" />
+    <input class="input" placeholder="手机号（可选）" value="{{regPhone}}" bindinput="onRegPhone" />
+    <input class="input" password placeholder="密码（至少6位）" value="{{regPassword}}" bindinput="onRegPassword" />
+    <button class="btn-primary" bindtap="register">注册</button>
+
+    <input class="input" placeholder="登录账号（邮箱或手机号）" value="{{loginAccount}}" bindinput="onLoginAccount" />
+    <input class="input" password placeholder="登录密码" value="{{loginPassword}}" bindinput="onLoginPassword" />
+    <button class="btn-primary" bindtap="login">登录</button>
+    <button class="btn-ghost" bindtap="logout">退出</button>
+
+    <view class="msg">{{authMsg}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">收费套餐</view>
+    <block wx:for="{{plans}}" wx:key="id">
+      <view class="plan">
+        <view class="plan-name">{{item.name}}</view>
+        <view class="plan-price">¥{{item.priceCny}} / 月</view>
+        <view class="subtitle">{{item.featuresText}}</view>
+        <button class="btn-primary" data-id="{{item.id}}" bindtap="subscribe">开通</button>
+      </view>
+    </block>
+    <view class="msg">{{billingMsg}}</view>
+  </view>
+</view>

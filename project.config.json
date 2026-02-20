@@ -1,0 +1,16 @@
+{
+  "description": "缘解 Veliora 仓库入口（小程序根目录映射）",
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "projectname": "veliora-root",
+  "miniprogramRoot": "miniapp/",
+  "srcMiniprogramRoot": "miniapp/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "condition": {}
+}

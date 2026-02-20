@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>缘解 Veliora · 开发者后台</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Veliora Developer Console</p>
+          <h1>缘解 Veliora · 开发者后台</h1>
+          <p class="subtitle">和用户界面分离的运营后台：看用户、订阅与关键指标。</p>
+        </div>
+        <a class="admin-link" href="/index.html">返回用户界面</a>
+      </header>
+
+      <section class="panel">
+        <h2>后台访问</h2>
+        <input id="adminKey" class="input" type="password" placeholder="输入 Admin Key" />
+        <button id="loadBtn" class="primary-btn">加载后台数据</button>
+        <pre id="adminMsg" class="answer-box"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>核心指标</h2>
+        <div id="statsGrid" class="book-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>最新用户</h2>
+        <pre id="usersBox" class="answer-box"></pre>
+      </section>
+
+      <section class="panel">
+        <h2>最新订阅</h2>
+        <pre id="subsBox" class="answer-box"></pre>
+      </section>
+    </main>
+
+    <script src="admin.js" type="module"></script>
+  </body>
+</html>
