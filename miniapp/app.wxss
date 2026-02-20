@@ -1,0 +1,73 @@
+page {
+  background: #0b1220;
+  color: #e2e8f0;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', sans-serif;
+}
+
+.container {
+  padding: 24rpx;
+}
+
+.card {
+  background: #111b31;
+  border: 1px solid #2e3a55;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 700;
+  margin-bottom: 12rpx;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.input {
+  border: 1px solid #334155;
+  border-radius: 12rpx;
+  padding: 14rpx;
+  margin-bottom: 12rpx;
+  background: #0f172a;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  color: #02111f;
+  font-weight: 700;
+  border: none;
+  margin-bottom: 10rpx;
+}
+
+.btn-ghost {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+}
+
+.msg {
+  white-space: pre-wrap;
+  color: #cbd5e1;
+  font-size: 24rpx;
+}
+
+.plan {
+  border: 1px solid #334155;
+  border-radius: 12rpx;
+  padding: 14rpx;
+  margin-top: 10rpx;
+}
+
+.plan-name {
+  font-weight: 700;
+}
+
+.plan-price {
+  color: #67e8f9;
+  margin: 4rpx 0;
+}

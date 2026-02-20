@@ -1,0 +1,24 @@
+{
+  "description": "缘解 Veliora 小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "minifyWXSS": true,
+    "minifyWXML": true,
+    "showShadowRootInWxmlPanel": true,
+    "compileHotReLoad": true,
+    "coverView": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.5.5",
+  "appid": "touristappid",
+  "projectname": "veliora-miniapp",
+  "simulatorType": "wechat",
+  "condition": {}
+}

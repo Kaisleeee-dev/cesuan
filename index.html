@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>缘解 Veliora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">✨ Veliora</p>
+          <h1 data-i18n="title">缘解 Veliora</h1>
+          <p class="subtitle" data-i18n="greeting">今天有什么想知道的吗？</p>
+        </div>
+        <div class="hero-controls">
+          <label>
+            <span data-i18n="language">语言</span>
+            <select id="languageSelect"></select>
+          </label>
+          <label>
+            <span data-i18n="region">地区模式</span>
+            <select id="regionSelect">
+              <option value="global">Global</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="americas">Americas</option>
+              <option value="middleEast">Middle East</option>
+            </select>
+          </label>
+          <a class="admin-link" href="/admin.html">进入开发者后台</a>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2 data-i18n="coreEntry">核心入口</h2>
+        <div class="entry-grid" id="entryGrid">
+          <button class="entry-card" data-prompt="请给我情感洞察与建议">❤️ <span data-i18n="entryEmotion">情感洞察</span></button>
+          <button class="entry-card" data-prompt="分析我和TA的关系匹配与沟通方式">🌟 <span data-i18n="entryMatch">关系匹配</span></button>
+          <button class="entry-card" data-prompt="分析未来30天人生趋势与关键节点">🪞 <span data-i18n="entryTrend">人生趋势</span></button>
+          <button class="entry-card" data-prompt="请作为AI顾问帮我制定下一步行动计划">🧠 <span data-i18n="entryAI">AI 咨询</span></button>
+        </div>
+      </section>
+
+      <section class="panel fortune-panel">
+        <h2 data-i18n="dailyFortune">今日运势</h2>
+        <div class="fortune-grid" id="fortuneGrid"></div>
+      </section>
+
+      <section class="panel chat-panel" id="aiSection">
+        <h2 data-i18n="aiAdvisor">AI 咨询</h2>
+        <div id="chatList" class="chat-list"></div>
+        <div class="ai-config">
+          <input id="apiBase" type="url" placeholder="https://api.openai.com/v1" />
+          <input id="apiKey" type="password" placeholder="API Key" />
+          <input id="apiModel" type="text" placeholder="gpt-4o-mini" />
+        </div>
+        <div class="chat-input-row">
+          <input id="questionInput" class="glow-input" type="text" placeholder="输入你的问题，立即获得结果..." />
+          <button id="askBtn" class="primary-btn" data-i18n="send">发送</button>
+        </div>
+      </section>
+
+      <section class="panel report-panel" id="analysisSection">
+        <h2 data-i18n="reportTitle">高级报告</h2>
+        <div class="report-score">
+          <p data-i18n="overallScore">总体评分</p>
+          <strong id="scoreValue">--</strong>
+        </div>
+        <div class="report-columns">
+          <article class="report-card">
+            <h3 data-i18n="keyConclusion">关键结论</h3>
+            <ul id="conclusionList"></ul>
+          </article>
+          <article class="report-card">
+            <h3 data-i18n="deepAnalysis">深度解析</h3>
+            <p id="analysisText">-</p>
+          </article>
+          <article class="report-card">
+            <h3 data-i18n="actionAdvice">建议行动</h3>
+            <ol id="actionList"></ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel books-panel">
+        <div class="panel-title-row">
+          <h2 data-i18n="bookLibrary">测算书籍库</h2>
+          <input id="searchInput" type="search" placeholder="搜索书名 / 体系" />
+        </div>
+        <div id="bookGrid" class="book-grid"></div>
+      </section>
+    </main>
+
+    <button id="floatingAiBtn" class="floating-ai">🤖 AI</button>
+
+    <nav class="bottom-nav">
+      <button data-target="top">🏠 <span data-i18n="navHome">首页</span></button>
+      <button data-target="analysisSection">🔮 <span data-i18n="navAnalysis">分析</span></button>
+      <button data-target="aiSection">💬 <span data-i18n="navAI">AI</span></button>
+      <button data-target="bookGrid">⭐ <span data-i18n="navFav">收藏</span></button>
+      <button data-target="top">👤 <span data-i18n="navMe">我的</span></button>
+    </nav>
+
+    <script src="app.js" type="module"></script>
+  </body>
+</html>
